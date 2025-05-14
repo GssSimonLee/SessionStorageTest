@@ -3,10 +3,12 @@
 用於測試在開啟新頁面（如新分頁或新視窗）時，`sessionStorage` 的行為是否會繼承的簡單網頁。
 
 ## 📁 專案結構
+
+```
 .
 ├── index.html # 主頁面，可輸入並儲存 sessionStorage 值
 └── test.html # 測試頁面，顯示從 sessionStorage 讀取的值
-
+```
 
 ## 🔧 使用方式
 
