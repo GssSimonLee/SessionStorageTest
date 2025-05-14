@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-region="TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SessionStorage 測試站台 - Index</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SessionStorage Test - 主頁</h1>
+    <p>
+      存入 sessionStorage 的值:
+      <input type="text" id="valueInput" placeholder="Enter something" />
+    </p>
+    <button onclick="saveValue()">存入 sessionStorage</button>
+    <button onclick="openTestPage()">開啟新分頁 test.html</button>
+    <p>
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"
+        target="_blank"
+        >mdn sessionstorage 相關技術說明</a
+      >
+    </p>
+    <p>
+      <a href="https://caniuse.com/?search=sessionstorage" target="_blank"
+        >caniuse 各瀏覽器技術支援</a
+      >
+    </p>
+
+    <script>
+      function saveValue() {
+        const value = document.getElementById("valueInput").value;
+        sessionStorage.setItem("key1", value);
+        alert("將值存入 sessionStorage!");
+      }
+
+      function openTestPage() {
+        window.open("test.html", "_blank");
+      }
+    </script>
+  </body>
+</html>

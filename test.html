@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-region="TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SessionStorage 測試站台 - 新開分頁</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      #result {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SessionStorage Test - 新分頁</h1>
+    <p>自 sessionStorage 讀取 key1 的值:</p>
+    <div id="result">Loading...</div>
+
+    <script>
+      const storedValue = sessionStorage.getItem("key1");
+      document.getElementById("result").textContent =
+        storedValue !== null
+          ? `sessionStorage.key1= ${storedValue}`
+          : "sessionStorage 抓不到值";
+    </script>
+  </body>
+</html>
